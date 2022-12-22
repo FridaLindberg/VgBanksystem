@@ -1,10 +1,12 @@
 package Utility;
 
+import Accounts.Account;
 import Accounts.AccountFactory;
 import Accounts.AccountType;
 import Database.Database;
 import Users.Customer;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -172,5 +174,56 @@ public class Utility {
         } else {
             System.out.println("felaktigt siffra");
         }
+    }
+    public void deleteAccount(Customer customer) {
+        boolean found = false;
+        System.out.println("Vilket konto vill du radera?\n");
+        for (int i = 0; i < customer.getAccounts().size(); i++) {
+            System.out.println(i + 1 + ". Konto: " + customer.getAccounts().get(i).getId() + " Balance: " + customer.getAccounts().get(i).getBalance() + " kr");
+        }
+        int account = inputInt("Skriv det sexsiffriga kontonumret");
+        for (int i = 0; i < customer.getAccounts().size(); i++) {
+            if (customer.getAccounts().get(i).getId() == account) {
+                customer.getAccounts().remove(i);
+                found = true;
+                database.updateCustomerTextFile();
+            }
+        }
+        if (!found) {
+            System.out.println("Felaktigt kontonummer");
+        }
+    }
+    public void addCustomer() {
+        System.out.println("Skriv in ditt namn");
+        Scanner scan = new Scanner(System.in);
+        String name = scan.nextLine();
+        System.out.println("Skriv in ditt lösenord");
+        String password = scan.nextLine();
+        System.out.println("Skriv in ditt personnummer");
+        String idNumber = scan.nextLine();
+        ArrayList<Account> temp = new ArrayList<>();
+        Account temp2 = AccountFactory.getAccount(AccountType.BASICACCOUNT);
+        temp2.setId(createRandomNumber());
+        temp2.setBalance(0);
+        temp.add(temp2);
+        database.getCustomers().add(new Customer(name, password, idNumber, temp));
+        database.updateCustomerTextFile();
+    }
+
+    public boolean deleteCustomer(Customer customer) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Vill du verkligen radera ditt användarkonto? (j/n)");
+        if(scan.next().equalsIgnoreCase("j")) {
+            database.getCustomers().remove(customer);
+            database.updateCustomerTextFile();
+            return false;
+        }
+        else if (scan.next().equals("n")) {
+            System.out.println("Du är fortfarande vår kund!");
+        }
+        else {
+            System.out.println("Skriv j eller n");
+        }
+        return true;
     }
 }

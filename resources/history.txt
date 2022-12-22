@@ -43,3 +43,8 @@ Activity: Withdraw 1000 kr from Account 424756.
 Time: 11:56:41.
 Date: 2022-12-21
 
+User: Frida Lindberg.
+Activity: Created new BASICACCOUNT with number: 195541.
+Time: 14:56:48.
+Date: 2022-12-22
+

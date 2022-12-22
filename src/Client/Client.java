@@ -7,6 +7,10 @@ import Database.Database;
 import Users.*;
 import Utility.Utility;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -30,7 +34,8 @@ public class Client {
                     1. Logga in
                     2. Skapa ny användare
                     3. FAQ
-                    4. Avsluta Programmet""");
+                    4. Skicka in en fråga
+                    5. Avsluta Programmet""");
             switch (answer) {
                 case (1) -> {
                     System.out.println("\nSkriv in personnummer:");
@@ -68,14 +73,17 @@ public class Client {
                     }
                 }
                 case (2) -> {
-                    addCustomer();
+                    utility.addCustomer();
                     utility.sleep(1000);
                 }
                 case (3) -> {
                     faq.readingFAQ();
                     utility.sleep(1000);
                 }
-                case (4) -> System.exit(0);
+                case (4) -> {
+                    sendQuestion();
+                }
+                case (5) -> System.exit(0);
                 default -> System.out.println("Felaktigt nummer");
             }
         }
@@ -85,14 +93,17 @@ public class Client {
         boolean startLoop = true;
         do {
             int answer = utility.inputInt("Välkommen " + customer.getName() +
-                    "\n1. Överföra pengar\n2. Sätta in pengar\n3. Ta ut pengar\n4. Kolla dina konton\n5. Skapa nytt bankkonto\n6. Logga ut");
+                    "\n1. Överföra pengar\n2. Sätta in pengar\n3. Ta ut pengar\n4. Kolla dina konton\n" +
+                    "5. Skapa nytt bankkonto\n6. Radera bankkonto\n7. Radera ditt användarkonto\n8. Logga ut");
                 switch (answer) {
                     case (1) -> utility.transfer(customer);
                     case (2) -> utility.deposit(customer);
                     case (3) -> utility.withdraw(customer);
                     case (4) -> utility.checkAccount(customer);
                     case (5) -> utility.createNewAccount(customer);
-                    case (6) -> startLoop = false;
+                    case (6) -> utility.deleteAccount(customer);
+                    case (7) -> startLoop = utility.deleteCustomer(customer);
+                    case (8) -> startLoop = false;
                     default -> System.out.println("Felaktigt nummer");
                 }
             }while(startLoop);
@@ -111,21 +122,20 @@ public class Client {
         }while(startLoop);
     }
 
-    private void addCustomer(){
-        System.out.println("Skriv in ditt namn");
+
+    public void sendQuestion(){
         Scanner scan = new Scanner(System.in);
-        String name = scan.nextLine();
-        System.out.println("Skriv in ditt lösenord");
-        String password = scan.nextLine();
-        System.out.println("Skriv in ditt personnummer");
-        String idNumber = scan.nextLine();
-        ArrayList<Account> temp = new ArrayList<>();
-        Account temp2 = AccountFactory.getAccount(AccountType.BASICACCOUNT);
-        temp2.setId(utility.createRandomNumber());
-        temp2.setBalance(0);
-        temp.add(temp2);
-        database.getCustomers().add(new Customer(name, password, idNumber, temp));
-        database.updateCustomerTextFile();
+        System.out.println("\nSkriv din fråga:");
+        String question = scan.nextLine();
+
+        try(PrintWriter write = new PrintWriter(new BufferedWriter(new FileWriter("resources/questionsFromCustomers.txt", true)));){
+            write.append(System.lineSeparator() + question + "\n");
+            System.out.println("Din fråga är skickad!\n");
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
     public static void main(String[] args) {

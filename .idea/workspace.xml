@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd967b2f-7d7f-4320-9d57-d23e0e723ff0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VgBanksystem.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/FrequentlyAskedQuestions.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/admins.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/customers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/history.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Accounts/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Accounts/AccountFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Accounts/AccountType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Accounts/BasicAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Accounts/SavingsAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Client/FAQ.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Database/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Users/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Users/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Users/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utility/History.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utility/Utility.java" afterDir="false" />
+    <list default="true" id="dd967b2f-7d7f-4320-9d57-d23e0e723ff0" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/resources/questionsFromCustomers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/customers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/customers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/resources/history.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utility/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utility/Utility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -88,8 +76,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671713335203</updated>
-      <workItem from="1671713336592" duration="1401000" />
+      <workItem from="1671713336592" duration="4452000" />
     </task>
+    <task id="LOCAL−00001" summary="initial commit">
+      <created>1671714770313</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1671714770313</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,5 +100,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
