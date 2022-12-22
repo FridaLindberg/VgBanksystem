@@ -184,6 +184,7 @@ public class Utility {
         int account = inputInt("Skriv det sexsiffriga kontonumret");
         for (int i = 0; i < customer.getAccounts().size(); i++) {
             if (customer.getAccounts().get(i).getId() == account) {
+                history.writeToFile("Deleted account " + customer.getAccounts().get(i).getId(), customer);
                 customer.getAccounts().remove(i);
                 found = true;
                 database.updateCustomerTextFile();

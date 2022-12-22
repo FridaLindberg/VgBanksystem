@@ -48,3 +48,23 @@ Activity: Created new BASICACCOUNT with number: 195541.
 Time: 14:56:48.
 Date: 2022-12-22
 
+User: Frida Lindberg.
+Activity: Created new SAVINGSACCOUNT with number: 511957.
+Time: 15:09:32.
+Date: 2022-12-22
+
+User: Frida Lindberg.
+Activity: Created new SAVINGSACCOUNT with number: 962452.
+Time: 15:12:39.
+Date: 2022-12-22
+
+User: Frida Lindberg.
+Activity: Created new SAVINGSACCOUNT with number: 880381.
+Time: 15:13:45.
+Date: 2022-12-22
+
+User: Frida Lindberg.
+Activity: Deleted account 962452.
+Time: 15:15:10.
+Date: 2022-12-22
+
