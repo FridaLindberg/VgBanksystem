@@ -1,0 +1,45 @@
+User: Erik Wallenius.
+Activity: Deposit 1000 kr.
+Time: 14:30:56.
+Date: 2022-12-16
+
+User: Erik Wallenius.
+Activity: Withdraw 500 kr.
+Time: 14:39:04.
+Date: 2022-12-16
+
+User: Frida Lindberg.
+Activity: Deposit 100 kr.
+Time: 15:08:33.
+Date: 2022-12-16
+
+User: Erik Wallenius.
+Activity: Withdraw 1000 kr from Account 3000.
+Time: 06:00:33.
+Date: 2022-12-18
+
+User: Samuel Peterson.
+Activity: Transfer 200 kr from Account 777 to account 8080.
+Time: 09:59:22.
+Date: 2022-12-19
+
+User: Hanna Ahl.
+Activity: Deposit 4000 kr to Account 629418.
+Time: 10:33:07.
+Date: 2022-12-20
+
+User: Frida Lindberg.
+Activity: Transfer 200 kr from Account 304562 to Account 123372.
+Time: 11:22:46.
+Date: 2022-12-21
+
+User: Erik Wallenius.
+Activity: Deposit 1000 kr to Account 424756.
+Time: 11:56:06.
+Date: 2022-12-21
+
+User: Erik Wallenius.
+Activity: Withdraw 1000 kr from Account 424756.
+Time: 11:56:41.
+Date: 2022-12-21
+

@@ -1,0 +1,14 @@
+Hur skapar jag ett konto?
+Du använder funktionen "Skapa ny användare" i startmenyn, den har kortkommando 2.
+
+Hur loggar jag in?
+Du använder funktionen "Logga in" i startmenyn, den har kortkommando 1.
+
+Hur för jag över pengar?
+När du är inloggad så använder du kortkommando 1. Då får du välja vilket konto du för över från, vilket konto du för över till och vilken summa.
+
+Jag lyckas inte logga in trots att jag skriver mitt namn rätt?
+För att logga in så använder du ditt personnummer och sedan lösenordet du valde när du skapade kontot.
+
+Finns det någon gräns på hur mycket jag kan föra över/sätta in?
+Det finns ingen maxgräns för hur mycket du kan föra över eller sätta in.
